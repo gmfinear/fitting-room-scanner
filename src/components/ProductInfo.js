@@ -37,7 +37,7 @@ export default class ProductInfo extends React.Component {
         axios.post('https://onesignal.com/api/v1/notifications?included_segments=["include_player_ids"]' , 
         {
             "app_id": "c5e3b183-e135-453e-aebc-bdeb10251ea1",
-            "contents": {"en": `Dressing room 1 requests ${this.props.productData.plainName} size: ${this.state.selectedSize} color: ${this.state.selectedColor}`},
+            "contents": {"en": `Dressing room #1 is requesting an item. Item #: ${this.props.productData.number} | Name: ${this.props.productData.plainName} | Brand: ${this.props.productData.brandName} | Size: ${this.state.selectedSize} | Color: ${this.state.selectedColor} | Price: $${this.props.productData.priceDetails.regular.price.min}`},
             "include_player_ids": ["0b3fc7c2-d2d6-46e8-8735-3b1c3804188e"]
         },
         {
@@ -57,7 +57,7 @@ export default class ProductInfo extends React.Component {
         axios.post('https://onesignal.com/api/v1/notifications?included_segments=["include_player_ids"]' , 
         {
             "app_id": "c5e3b183-e135-453e-aebc-bdeb10251ea1",
-            "contents": {"en": `CANCELLED: Dressing room 1 requests ${this.props.productData.plainName} size: ${this.state.selectedSize} color: ${this.state.selectedColor}`},
+            "contents": {"en": `CANCELLED: Dressing room #1 is requesting an item. Item #: ${this.props.productData.number} | Name: ${this.props.productData.plainName} | Brand: ${this.props.productData.brandName} | Size: ${this.state.selectedSize} | Color: ${this.state.selectedColor} | Price: $${this.props.productData.priceDetails.regular.price.min}`},
             "include_player_ids": ["0b3fc7c2-d2d6-46e8-8735-3b1c3804188e"]
         },
         {
