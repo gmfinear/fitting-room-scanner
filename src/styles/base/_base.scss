@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "BrandonText-Regular";
+    src: url("fonts/Brandon_txt_reg.otf") format("opentype");
+  }
+
+@font-face {
+    font-family: "BrandonText-Bold";
+    src: url("fonts/Brandon_txt_bld.otf") format("opentype");
+  }
+
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: 'BrandonText-Regular';
+    font-size: $l-size;
+}
+
+button {
+     cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+
+

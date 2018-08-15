@@ -1,0 +1,83 @@
+.ReactModalPortal > div {
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: opacity 200ms ease-in-out;
+    :focus {
+        outline:0
+    }
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal {
+    background: white;
+    border: black .2rem solid;
+    padding: $l-size;
+    width: 75rem;
+    height: 75rem;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around
+}
+
+.dropdown {
+    margin: $m-size auto;
+}
+
+.dropdown-select {
+    min-width: 350px;
+    max-width: 350px;
+}
+
+.product-title {
+    margin-bottom: 1rem;
+    font-size: $l-size;
+}
+
+.product-subtitle {
+    margin-top: 0;
+    font-size: $m-size;
+    margin-bottom: 50px;
+}
+
+.product-img {
+    margin-top: $l-size;
+    padding-right: $l-size;
+}
+
+.modal-message {
+    text-align: center;
+}
+
+.modal-message-h3 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 4.4rem;
+}
+
+.modal-message-p {
+    margin-top: 0;
+    font-size: $l-size;
+}
+
+.modal-info {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

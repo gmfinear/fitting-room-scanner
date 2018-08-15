@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "BrandonText-Regular";
+    src: url("fonts/Brandon_txt_reg.otf") format("opentype");
+  }
+
+.request-help {
+    border: none;
+    background: black;
+    color: white;
+    width: 30.7rem;
+    height: 7.2rem;
+    font-size: $m-size;
+    font-family: "BrandonText-Regular";
+    margin-top: 3rem;
+    margin-right: 3rem;
+}
+
+.request-item {
+    border: none;
+    background: black;
+    color: white;
+    width: 30.7rem;
+    height: 7.2rem;
+    font-size: $m-size;
+    font-family: "BrandonText-Regular";
+    padding: 1.2rem;
+    margin-top: 3rem;
+}
+
+.request-help-div {
+    position: absolute;
+    right: 30px;
+    top: 30px
+}
+
+.request-item-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 7.0rem;
+}
+
+.close {
+    border: .2rem solid black;
+    background: white;
+    width: 5rem;
+    height: 5rem;
+    font-size: $m-size;
+    font-family: "BrandonText-Regular";
+    display:      block;
+    margin-left:  auto;
+    margin-right: 0;
+}
+
+.cancel {
+    border: .2rem solid black;
+    background: white;
+    width: 30.7rem;
+    height: 7.2rem;
+    font-size: $m-size;
+    font-family: "BrandonText-Regular";
+    margin-top: 3rem;
+    margin-right: 3rem;
+}
+
+// .cancel-div {
+//     display: flex;
+//     justify-content: right;
+// }

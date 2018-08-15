@@ -1,0 +1,33 @@
+.container {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -300px;
+    margin-top: -200px;
+    text-align: center;
+}
+
+.resize {
+    width: 150px;
+    height: auto;
+    margin-top: 8rem;
+}
+
+.form {
+    opacity: 0.5;
+}
+
+.input {
+    color: transparent;
+}
+
+.container-modal {
+    width: 600px;
+    height: 600px;
+}
+
+.message {
+    font-size: 5.2rem;
+}
