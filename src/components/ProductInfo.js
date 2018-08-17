@@ -3,6 +3,7 @@ import ProductTitle from './ProductTitle';
 import ProductImg from './ProductImg';
 import Dropdown from './Dropdown';
 import Cancel from './Cancel';
+import Logger from '../PiWik';
 
 export default class ProductInfo extends React.Component {
     state = {
@@ -38,6 +39,7 @@ export default class ProductInfo extends React.Component {
         {
             "app_id": "c5e3b183-e135-453e-aebc-bdeb10251ea1",
             "contents": {"en": `Dressing room #1 is requesting an item. Item #: ${this.props.productData.number} | Name: ${this.props.productData.plainName} | Brand: ${this.props.productData.brandName} | Size: ${this.state.selectedSize} | Color: ${this.state.selectedColor} | Price: $${this.props.productData.priceDetails.regular.price.min}`},
+            // "included_segments": ["All"]
             "include_player_ids": ["0b3fc7c2-d2d6-46e8-8735-3b1c3804188e"]
         },
         {
@@ -45,7 +47,11 @@ export default class ProductInfo extends React.Component {
                 'Content-Type': 'application/json',
                 'Authorization': 'Basic ' + process.env.ONE_SIGNAL_API_KEY
         }}).then(function () {
-            console.log("It worked!");
+            Logger.info({
+                source: 'user',
+                type: 'usage',
+                description: 'Item was requested'
+            })
             this.setState(() => ({
                 didPush: true,
                 bottomMessage: `We'll grab you a ${this.state.selectedColor.toLowerCase()} ${this.props.productData.plainName} in size ${this.state.selectedSize.toLowerCase()}.`
@@ -58,6 +64,7 @@ export default class ProductInfo extends React.Component {
         {
             "app_id": "c5e3b183-e135-453e-aebc-bdeb10251ea1",
             "contents": {"en": `CANCELLED: Dressing room #1 is requesting an item. Item #: ${this.props.productData.number} | Name: ${this.props.productData.plainName} | Brand: ${this.props.productData.brandName} | Size: ${this.state.selectedSize} | Color: ${this.state.selectedColor} | Price: $${this.props.productData.priceDetails.regular.price.min}`},
+            // "included_segments": ["All"]
             "include_player_ids": ["0b3fc7c2-d2d6-46e8-8735-3b1c3804188e"]
         },
         {
@@ -65,7 +72,11 @@ export default class ProductInfo extends React.Component {
                 'Content-Type': 'application/json',
                 'Authorization': 'Basic YzQzOGJlNmYtOWZkMS00ZTJhLTk4NTEtY2RjM2EwZDk0ZmZj'
         }}).then(function () {
-            console.log("It worked!");
+            Logger.info({
+                source: 'user',
+                type: 'usage',
+                description: 'CANCELLED: Item request'
+            })
             this.setState(() => ({
                 topMessage: "Request for item cancelled",
                 bottomMessage: "Let us know if you change your mind.",

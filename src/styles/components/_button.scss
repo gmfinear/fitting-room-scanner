@@ -46,9 +46,11 @@
     height: 5rem;
     font-size: $m-size;
     font-family: "BrandonText-Regular";
-    display:      block;
-    margin-left:  auto;
+    display: block;
+    margin-left: auto;
     margin-right: 0;
+    text-align: center;
+    padding: 0;
 }
 
 .cancel {

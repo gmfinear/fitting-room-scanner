@@ -1,5 +1,6 @@
 import React from 'react';
 import Cancel from './Cancel';
+import Logger from '../PiWik';
 
 export default class HelpInfo extends React.Component {
     state = {
@@ -14,6 +15,7 @@ export default class HelpInfo extends React.Component {
         {
             "app_id": "c5e3b183-e135-453e-aebc-bdeb10251ea1",
             "contents": {"en": `CANCELLED: Dressing room 1 requests help.`},
+            // "include_player_ids": ["All"]
             "include_player_ids": ["0b3fc7c2-d2d6-46e8-8735-3b1c3804188e"]
         },
         {
@@ -21,7 +23,11 @@ export default class HelpInfo extends React.Component {
                 'Content-Type': 'application/json',
                 'Authorization': 'Basic ' + process.env.ONE_SIGNAL_API_KEY
         }}).then(function () {
-            console.log("It worked!");
+            Logger.info({
+                source: 'user',
+                type: 'usage',
+                description: 'CANCELLED: Help request'
+            })
             this.setState(() => ({
                 messagetop: "Request for help cancelled.",
                 messagebottom: "Let us know if you change your mind.",

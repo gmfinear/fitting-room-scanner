@@ -48,7 +48,7 @@ export default class LookupTag extends React.Component {
     componentDidMount() {
         let scannedBarcode="";
         window.onkeypress = (e) => {
-            console.log(e)
+            console.log(e);
             let barcode ="";
             let code = e.keyCode ? e.keyCode : e.which;
             barcode=barcode+String.fromCharCode(code);
@@ -57,7 +57,7 @@ export default class LookupTag extends React.Component {
             if (e.key === "Enter") {
                 console.log("DISPATCHING: " + scannedBarcode);
                 const url = 'https://w4rum0t7vi.execute-api.us-east-1.amazonaws.com/Production/upc/' + scannedBarcode +'?apikey=' + process.env.OFFER_API_KEY;
-                this.props.getProductData(url)
+                this.props.getProductData(url);
                 barcode ='';
                 scannedBarcode ='';
                 code='';
@@ -66,7 +66,7 @@ export default class LookupTag extends React.Component {
     }
     
     render(){
-        console.log(this.props.productData);
+        // console.log(this.props.productData);
         return(
             <div>
             {this.props.error && <p>{this.props.error}</p>}
